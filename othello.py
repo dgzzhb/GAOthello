@@ -6,13 +6,11 @@ Game initialization and main loop
 """
 
 import pygame
-import pygame._view     #py2exe bug
 import ui
 import player
 import board
 from config import BLACK, WHITE
 
-# py2exe workaround
 import sys, os
 sys.stdout = open(os.devnull, 'w')
 sys.stderr = open(os.devnull, 'w')
