@@ -1,18 +1,22 @@
-****************  Othello  *******************
-Simple othello game with computer oponent intended for simple ai learning purposes.
-References:
-* http://lurgee.net/reversi-code/
+****************  GAOthello  *******************
 
-License:
-GPL
+This is a project for an AI class to explore the possibility of playing Othello using Genetic Algorithm. The Othello game we are using is based on:
 
-To play:
-Run othello.py
+	Simple othello game with computer oponent intended for simple ai learning purposes.
+	References:
+	* http://lurgee.net/reversi-code/
 
-Dependencies:
-Python
-pygame - www.pygame.org
+	License:
+	GPL
 
-humbhenri at gmail.com
-Humberto Henrique Campos Pinheiro
+	To play:
+	Run othello.py
 
+	Dependencies:
+	Python
+	pygame - www.pygame.org
+
+	humbhenri at gmail.com
+	Humberto Henrique Campos Pinheiro
+
+We added and modified some files to implement GA algorithm.
