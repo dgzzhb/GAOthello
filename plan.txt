@@ -1,0 +1,12 @@
+array: 17 numbers for 16 positions and 1 for heuristic
+
+1, a method for creating a population
+   a, random 16 number in a defined rangen (+-100)
+   b, run a game for every member of the population, after each run,
+      record the array into a line of the data file 
+2, selection by evaluation 
+   set a base constant fitness level: 0 (winning)
+   take 3 highest childs, the rest go through evolution
+   [old file 20 old child] [new file 3][17]
+   mutation + crossover 
+3, 
