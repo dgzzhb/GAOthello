@@ -19,10 +19,10 @@ class Evaluator(object):
             theFile.write(FILE_DATA[i])
         theFile.close() 
 
-    def score( self ):
+    def score( self, board ):
         """ Assign the weights from 1D array to the 2D board """
         
-        weightedBoard = Board()
+        weightedBoard = board
         
         for i in range (0, 4):
             for j in range (0, 4):
@@ -65,7 +65,7 @@ class Evaluator(object):
         return actualRow
 
     def printBoard( self ):
-        a = score( self )
+        a = Evaluator.score( self )
         for i in range ( 8 ):
             for j in range ( 8 ):
                 print self.board[i][j] ,
