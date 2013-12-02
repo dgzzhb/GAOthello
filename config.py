@@ -8,5 +8,5 @@ MAX = 0
 MIN = 1
 DEFAULT_LEVEL = 0
 HUMAN = "computer"
-COMPUTER = "computer"
+COMPUTER = "randomPlayer"
 
