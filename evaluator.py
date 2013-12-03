@@ -6,7 +6,8 @@ class Evaluator(object):
     
     def get_location_weight( self, deltaBoard ):
         """
-
+        This is the method that read current move on the board, get the
+        weight of current location, and add it to the heuristics.
         """
         # Read in weight and construct board
         f = open("input.txt", "r+")
@@ -70,11 +71,4 @@ class Evaluator(object):
         
         sc += self.get_location_weight( deltaBoard )
 
-
-
-
-        # Prepared for debugging and testing
-        l = open("new.txt", "a")
-        l.write("Hello")
-        l.close()
         return sc
