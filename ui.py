@@ -18,7 +18,7 @@ class Gui :
 
         # colors
         self.BLACK = ( 0, 0, 0 )
-        self.BACKGROUND = ( 0, 0, 255 )
+        self.BACKGROUND = ( 255, 238, 23 )
         self.WHITE = ( 255, 255, 255 )
 
         # display

@@ -15,6 +15,7 @@ import sys, os
 sys.stdout = open(os.devnull, 'w')
 sys.stderr = open(os.devnull, 'w')
 
+
 class Othello:
     """
     Game main class.
@@ -25,6 +26,7 @@ class Othello:
         self.gui = ui.Gui()
         self.board = board.Board()
         self.get_options()
+        self.counter = 0
 
     def get_options( self ):
         # set up players
@@ -44,6 +46,7 @@ class Othello:
 
     def run ( self ):
         clock = pygame.time.Clock()
+        self.counter = self.counter + 1
         while True:
             clock.tick( 60 )
             if self.board.game_ended():
@@ -63,7 +66,8 @@ class Othello:
             self.now_playing, self.other_player = self.other_player, self.now_playing
         self.gui.show_winner( winner )
         #pygame.time.wait( 1000 )
-        self.restart()
+        if self.counter < 20:
+            self.restart()
 
     def restart( self ):
         self.board = board.Board()
