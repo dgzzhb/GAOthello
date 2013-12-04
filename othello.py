@@ -7,6 +7,7 @@ This file has been modified for research purpose.
 
 """
 
+import os
 import pygame
 import ui
 import player
@@ -84,8 +85,12 @@ class Othello:
                 data = fin.read().splitlines(True)
             with open('input.txt', 'w') as fout:
                 fout.writelines(data[1:])
-            if self.counter < 20:
-                self.restart()
+        
+        if self.counter == 20:
+            os.system("python evolution.py")
+            counter = 0
+
+        self.restart()
 
     def restart( self ):
         self.board = board.Board()

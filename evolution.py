@@ -4,7 +4,7 @@ import random
 evaluation.py - Son Nguyen - GAOthello
 CS 480 Truman State University
 This is the genetic algorithm implementation file for othello game.
-The other part of the game is based on Humberto Henrique Campos Pinheiro's
+xThe other part of the game is based on Humberto Henrique Campos Pinheiro's
 othello game on GitHub.
 """
 # Requirement:
@@ -20,7 +20,7 @@ othello game on GitHub.
 # [30, 31, 32, 33]
 
 #INPUT
-f = open("inputcopy.txt", "r")
+f = open("output.txt", "r+")
 l = 0
 list = []
 while(l < 20):
@@ -92,6 +92,7 @@ for i in xrange(18):
 CROSS_OVER_RATE = 0.5
 MUTATION_RATE = 0.5
 CROSS_OVER_POINT = 7
+
 random.shuffle(evolution)
 print "before evolution"
 print evolution
@@ -121,8 +122,15 @@ print newGeneration
 
 
 
-file = open("new.txt","w")
+file = open("input.txt","w")
 for i in xrange(20):
-   file.write(str(newGeneration[i]))
+   file.write("[")
+   for j in xrange(16):
+      file.write(str(newGeneration[i][j]))
+      if j != 15:
+         file.write(", ")
+   file.write("]")
    file.write('\n')
-
+f.close()
+open('output.txt', 'w').close()
+file.close()
