@@ -69,19 +69,21 @@ class Othello:
         self.gui.show_winner( winner, blacks-whites)
         pygame.time.wait( 1000 )
         if self.counter < 20:
-            with open('input.txt', 'r') as fin:
-                data = fin.read().splitlines(True)
-            with open('input.txt', 'w') as fout:
-                fout.writelines(data[1:])
             
             f = open("input.txt", "r+")
             line = f.readline()
             f.close()
-            f = open("output.txt", "w")
+            f = open("output.txt", "a")
             line = line[:-2]
-            seq = (line, ", ", blacks-whites, "]")
+            seq = (line, ", ", str(blacks-whites), "]")
             f.write(''.join(seq))
+            f.write('\n')
             f.close()
+
+            with open('input.txt', 'r') as fin:
+                data = fin.read().splitlines(True)
+            with open('input.txt', 'w') as fout:
+                fout.writelines(data[1:])
 
             self.restart()
 
