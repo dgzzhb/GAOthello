@@ -1,5 +1,7 @@
 """ Othello game GUI
     Humberto Henrique Campos Pinheiro
+
+    This file has been modified for research purpose.
 """
 
 import pygame
@@ -60,13 +62,13 @@ class Gui :
             # desafoga a cpu
 
             
-    def show_winner( self, player_color ):
+    def show_winner( self, player_color, weight ):
         self.screen.fill( pygame.Color( 0, 0, 0, 50 ))
         font = pygame.font.SysFont( "Courier New", 34 )
         if player_color == WHITE:
-            msg = font.render( "White player wins", True, self.WHITE )
+            msg = font.render( str(weight), True, self.WHITE )
         elif player_color == BLACK:
-            msg = font.render( "Black player wins", True, self.WHITE )
+            msg = font.render( str(weight), True, self.WHITE )
         else:
             msg = font.render( "Tie !", True, self.WHITE )
         self.screen.blit( msg, msg.get_rect( centerx = self.screen.get_width()/2, centery = 120))

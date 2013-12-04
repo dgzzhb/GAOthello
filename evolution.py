@@ -1,5 +1,12 @@
 from random import randint
 import random
+"""
+evaluation.py - Son Nguyen - GAOthello
+CS 480 Truman State University
+This is the genetic algorithm implementation file for othello game.
+The other part of the game is based on Humberto Henrique Campos Pinheiro's
+othello game on GitHub.
+"""
 # Requirement:
 # read the n member in the population
 # decide to keep max of 3 and min of 1 child for later generation

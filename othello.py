@@ -3,6 +3,8 @@
 othello.py Humberto Henrique Campos Pinheiro
 Game initialization and main loop
 
+This file has been modified for research purpose.
+
 """
 
 import pygame
@@ -64,9 +66,23 @@ class Othello:
                 whites, blacks, empty = self.board.count_stones()
                 self.gui.update( self.board.board, blacks, whites)
             self.now_playing, self.other_player = self.other_player, self.now_playing
-        self.gui.show_winner( winner )
-        #pygame.time.wait( 1000 )
+        self.gui.show_winner( winner, blacks-whites)
+        pygame.time.wait( 1000 )
         if self.counter < 20:
+            with open('input.txt', 'r') as fin:
+                data = fin.read().splitlines(True)
+            with open('input.txt', 'w') as fout:
+                fout.writelines(data[1:])
+            
+            f = open("input.txt", "r+")
+            line = f.readline()
+            f.close()
+            f = open("output.txt", "w")
+            line = line[:-2]
+            seq = (line, ", ", blacks-whites, "]")
+            f.write(''.join(seq))
+            f.close()
+
             self.restart()
 
     def restart( self ):

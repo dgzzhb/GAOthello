@@ -1,6 +1,14 @@
 from config import BLACK, WHITE, EMPTY
 import ast
 
+"""
+evaluator.py  - GAOthello
+CS 480 Truman State University
+This is the evaluator that returns heuristics for Minimax Algorithm.
+The other part of the game is based on Humberto Henrique Campos Pinheiro's
+othello game on GitHub.
+"""
+
 class Evaluator(object):    
     WIPEOUT_SCORE = 1000    #a move that results a player losing all pieces
     
