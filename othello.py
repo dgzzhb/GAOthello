@@ -68,7 +68,7 @@ class Othello:
             self.now_playing, self.other_player = self.other_player, self.now_playing
         self.gui.show_winner( winner, blacks-whites)
         pygame.time.wait( 1000 )
-        if self.counter < 20:
+        if self.counter <= 20:
             
             f = open("input.txt", "r+")
             line = f.readline()
@@ -84,8 +84,8 @@ class Othello:
                 data = fin.read().splitlines(True)
             with open('input.txt', 'w') as fout:
                 fout.writelines(data[1:])
-
-            self.restart()
+            if self.counter < 20:
+                self.restart()
 
     def restart( self ):
         self.board = board.Board()

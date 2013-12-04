@@ -20,7 +20,7 @@ othello game on GitHub.
 # [30, 31, 32, 33]
 
 #INPUT
-f = open("firstGeneration.txt", "r+")
+f = open("inputcopy.txt", "r")
 l = 0
 list = []
 while(l < 20):
